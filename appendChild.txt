@@ -1,0 +1,1 @@
+Cada uno de los elementos creados para mostrar el modal se hicieron usando append child y set atribute
