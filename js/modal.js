@@ -19,12 +19,11 @@ function desplegarModal() {
     btnModalCerrar.setAttribute('class', 'btn-cerrar')
     btnModalCerrar.setAttribute('id', 'btnCerrar')
     btnModalCerrar.setAttribute('onClick', 'cerrarModal()');
+    modal.appendChild(btnModalCerrar);
 
     let xCerrar = document.createElement('i')
     xCerrar.setAttribute('class', 'fa fa-times');
     btnModalCerrar.appendChild(xCerrar);
-
-    modal.appendChild(btnModalCerrar);
 
     contenedorModal.appendChild(modal);
 
@@ -36,7 +35,6 @@ function desplegarModal() {
     }
     modal.appendChild(flechaIzquierda);
     modal.appendChild(flechaDerecha);
-
 }
 
 for (let i = 0; i < imagenProyecto.length; i++) {
@@ -63,7 +61,6 @@ flechaIzquierda.addEventListener('click', mostrarImagenAnterior);
 let flechaDerecha = document.createElement('i');
 flechaDerecha.setAttribute('class', 'fas fa-arrow-right flecha-derecha');
 flechaDerecha.addEventListener('click', mostrarImagenSiguiente);
-
 
 function mostrarImagenSiguiente() {
     indiceActual = (indiceActual + 1) % imagenProyecto.length;
